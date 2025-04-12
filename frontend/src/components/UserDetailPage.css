@@ -1,0 +1,48 @@
+.user-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-detail-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-info, .user-listing {
+    width: 45%;
+}
+
+.user-info h3, .user-listing h3 {
+    margin-bottom: 20px;
+}
+
+.user-info p, .user-listing p {
+    margin-bottom: 10px;
+}
+
+.listing-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.edit-profile-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.edit-profile-button:hover {
+    background-color: #ff4a4a;
+}
