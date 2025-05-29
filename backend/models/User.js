@@ -1,4 +1,4 @@
-const db = require('../server'); // Import the database connection
+const db = require('../config/db');
 const bcrypt = require('bcryptjs');
 
 const createUserTable = () => {
@@ -34,6 +34,7 @@ const User = {
         });
     },
     findByUsername: (username) => {
+
         const sql = 'SELECT * FROM users WHERE username = ?';
         return new Promise((resolve, reject) => {
             db.query(sql, [username], (err, result) => {

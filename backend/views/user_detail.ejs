@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/UserDetail.css">
+</head>
+<body>
+    <% if (!user) { %>
+        <div class="user-loading">Loading profile...</div>
+    <% } else { %>
+        <div class="user-detail-wrapper">
+            <div class="user-detail-card">
+                <a href="/users/logout" class="logout-button">Logout</a>
+                <h2 class="page-title">Profile Overview</h2>
+                <div class="user-detail-grid">
+                    <div class="user-info">
+                        <h3>Your Info</h3>
+                        <p><strong>Full Name:</strong> <%= user.fullName %></p>
+                        <p><strong>Email:</strong> <%= user.email %></p>
+                        <p><strong>Phone:</strong> <%= user.phoneNumber %></p>
+                        <p><strong>Address:</strong> <%= user.address %></p>
+                    </div>
+
+                    <div class="user-listing">
+                        <h3>Your Listing</h3>
+                        <div class="listing-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="Listing" />
+                            <div>
+                                <p><strong>Description:</strong> <%= user.description || 'N/A' %></p>
+                                <p><strong>Price:</strong> <%= user.price || 'N/A' %></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="edit-profile-button">Edit Your Profile</button>
+            </div>
+        </div>
+    <% } %>
+</body>
+</html>

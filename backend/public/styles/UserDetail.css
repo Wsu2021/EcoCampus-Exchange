@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  }
+  
+
+.user-detail-wrapper {
+    background-color: #f3f4f6;
+    padding: 50px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.user-detail-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eee;
+}
+
+.page-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2c2c2c;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.user-detail-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.user-info, .user-listing {
+    flex: 1 1 400px;
+}
+
+.user-info h3,
+.user-listing h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.user-info p,
+.user-listing p {
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #555;
+}
+
+.listing-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.listing-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+.edit-profile-button {
+    margin-top: 30px;
+    width: 30%;
+    padding: 14px;
+    background-color: #ff6f61;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-profile-button:hover {
+    background-color: #ff4a4a;
+}
+
+.user-loading {
+    text-align: center;
+    padding: 50px;
+    font-size: 18px;
+    color: #555;
+}
+
+.logout-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #f44336; /* red */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}

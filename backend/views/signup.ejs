@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/SignUp.css" />
+  </head>
+  <body>
+    <div class="signup-wrapper">
+      <div class="signup-card">
+        <h2 class="signup-title">Create Your Account</h2>
+
+        <% if (typeof successMessage !== 'undefined' && successMessage) { %>
+        <div class="success-popup"><%= successMessage %></div>
+        <% } %>
+
+        <form action="/users/register" method="POST" class="signup-form">
+          <div class="photo-upload">
+            <div class="photo-placeholder">
+              <span class="photo-icon">+</span>
+              <span class="photo-text">Upload Photo</span>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3 class="section-title">Account Info</h3>
+            <div class="form-row">
+              <div class="form-field">
+                <input
+                  type="text"
+                  name="username"
+                  placeholder="Username"
+                  required
+                />
+              </div>
+              <div class="form-field">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3 class="section-title">Personal Info</h3>
+            <div class="form-row">
+              <div class="form-field">
+                <input
+                  type="text"
+                  name="fullName"
+                  placeholder="Full Name"
+                  required
+                />
+              </div>
+              <div class="form-field">
+                <input type="email" name="email" placeholder="Email" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <input
+                  type="text"
+                  name="address"
+                  placeholder="Address"
+                  required
+                />
+              </div>
+              <div class="form-field">
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  placeholder="Phone Number"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="signup-button">Register</button>
+        </form>
+
+        <div class="signup-footer">
+          <p>Already have an account? <a href="/users/login">Login</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

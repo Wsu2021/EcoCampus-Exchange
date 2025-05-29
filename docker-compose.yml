@@ -13,14 +13,6 @@ services:
     depends_on:
       - mysql
 
-  frontend:
-    build:
-      context: ./frontend
-    ports:
-      - "3000:80"
-    depends_on:
-      - backend
-
   mysql:
     image: mysql:5.7
     ports:
